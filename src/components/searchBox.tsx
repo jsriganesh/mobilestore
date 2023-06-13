@@ -12,13 +12,14 @@ import { Labels } from "../utils/labels";
 
 interface SearchBoxProps {
   type: "button" | "input";
+  onClick?:CallableFunction
 }
-const SearchBox: React.FC<SearchBoxProps> = ({ type }) => {
+const SearchBox: React.FC<SearchBoxProps> = ({ type,onClick }) => {
   const [searchValue, setSearchVal] = useState("");
   return (
     <View style={styles.searchBoxContainer}>
       {type == "button" ? (
-        <TouchableOpacity style={{ flexDirection: "row", width: "80%" }}>
+        <TouchableOpacity onPress={()=>onClick && onClick()} style={{ flexDirection: "row", width: "80%" }}>
           <Image
             tintColor={Colors.themeOrange}
             source={require("../../assets/images/icons/search.png")}

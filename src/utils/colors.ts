@@ -5,5 +5,6 @@ export const Colors ={
     themeSubOrange:"#F6A71F",
     black:"#000000",
     white:"#FFFFFF",
-    textBoxBGColor:"#7690A8"
+    textBoxBGColor:"#7690A8",
+    green:"#398D3C",
 }

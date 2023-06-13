@@ -11,6 +11,7 @@ export const Labels ={
     searchTextHome:"Search item",
     category:"Category",
     viewAll:"View All",
-    exclusiveOffer:"Exclusive Offer"
+    exclusiveOffer:"Exclusive Offer",
+    productDetails:"Product Details"
 
 }

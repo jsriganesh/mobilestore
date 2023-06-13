@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, Image, SafeAreaView, ScrollView } from "react-native";
-import React from "react";
+import React ,{useState}from "react";
 import { Colors } from "../utils/colors";
 import { CommonButton } from "../components/button";
 import { LinearGradient } from "expo-linear-gradient";
@@ -14,24 +14,30 @@ import ImageCarousel from "../components/imageCarousel";
 import CategoryList from "../components/category/categoryList";
 import ExclusiveOfferList from "../components/exclusiveOffer/exclusiveOfferList";
 import Footer from "../components/footer";
+import SearchModal from "../components/searchModal/searchModal";
 
 interface HomeProps {}
 const Home: React.FC<HomeProps> = ({}) => {
+  const [showModal,updateModalFlag]= useState(false)
   return (
     <SafeAreaView style={styles.container}>
       <LinearGradient
         colors={[Colors.themeBlue, Colors.themeSubBlue]}
         style={styles.containerbody}
       >
+
         <Header/>
-        <SearchBox type={"button"}/>
+        <SearchBox type={"button"} onClick={()=>updateModalFlag(true)}/>
         <ScrollView showsVerticalScrollIndicator={false}>
         <ImageCarousel/>
         <CategoryList/>
         <ExclusiveOfferList/>
         </ScrollView>
         <Footer/>
+
       </LinearGradient>
+      {showModal && <SearchModal closeModal={()=>updateModalFlag(false)}/>}
+
     </SafeAreaView>
   );
 };

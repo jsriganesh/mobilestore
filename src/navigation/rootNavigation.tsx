@@ -6,6 +6,7 @@ import Login from "../pages/login";
 import Registration from "../pages/registration";
 import { ScreenNames } from "../utils/screenNames";
 import Home from "../pages/home";
+import ProductDetails from "../pages/productDetails";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,7 @@ const RootNavigation = () => {
         <Stack.Screen name={ScreenNames.login} component={Login} />
         <Stack.Screen name={ScreenNames.registration} component={Registration} />
         <Stack.Screen name={ScreenNames.home} component={Home} />
+        <Stack.Screen name={ScreenNames.productDetails} component={ProductDetails} />
         
       </Stack.Navigator>
     </NavigationContainer>
