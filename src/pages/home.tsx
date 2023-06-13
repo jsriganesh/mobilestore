@@ -24,7 +24,7 @@ const Home: React.FC<HomeProps> = ({}) => {
         style={styles.containerbody}
       >
         <Header/>
-        <SearchBox/>
+        <SearchBox type={"button"}/>
         <ScrollView showsVerticalScrollIndicator={false}>
         <ImageCarousel/>
         <CategoryList/>
