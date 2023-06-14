@@ -47,7 +47,7 @@ const ProductDetails = () => {
 
         <View style={{flexDirection:"row"}}>
             <View style={{flex:0.15}}>
-                <Image source={require("../../assets/images/icons/right_arrow.png")} tintColor={Colors.themeSubOrange} style={{height:35,width:35}}/>
+                <Image source={require("../../assets/images/icons/back_arrow.png")} tintColor={Colors.themeSubOrange} style={{height:35,width:35}}/>
             </View>
             <View style={{flex:0.7,alignSelf:"center",alignItems:"center"}}><Text style={{fontSize:18,fontWeight:"bold",color:Colors.themeSubOrange}}>{Labels.productDetails}</Text></View>
             <View style={{flex:0.15}}></View>
