@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Image, SafeAreaView } from "react-native";
 import React from "react";
 import { Colors } from "../utils/colors";
 import { CommonButton } from "../components/button";
-import { LinearGradient } from "expo-linear-gradient";
+import LinearGradient from 'react-native-linear-gradient';
 import { HeaderText } from "../components/commonText";
 import { Labels } from "../utils/labels";
 import { CommonInput } from "../components/textBox";

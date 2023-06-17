@@ -6,7 +6,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 
 import { Colors } from "../../utils/colors";
 import SearchBox from "../searchBox";
-import { LinearGradient } from "expo-linear-gradient";
+import LinearGradient from 'react-native-linear-gradient';
 import ItemBasicDetails from "./itemBasicDetails";
 
 const { height } = Dimensions.get("screen");

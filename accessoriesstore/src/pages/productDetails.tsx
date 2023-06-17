@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { LinearGradient } from "expo-linear-gradient";
+import LinearGradient from 'react-native-linear-gradient';
 import { Colors } from "../utils/colors";
 import { Labels } from "../utils/labels";
 import { UnderLine,SmallTitleText } from "../components/commonComponents";
