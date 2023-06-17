@@ -1,17 +1,25 @@
 import { View, Text,StyleSheet, TouchableOpacity, Image } from 'react-native'
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { Colors } from '../utils/colors'
 import { footerList } from '../utils/constants'
+import { useNavigation } from '@react-navigation/native'
 
-const Footer = () => {
-    const [selectedFooter,changeFooter]= useState(footerList[0].type)
+const Footer = ({seleted,}) => {
+    const navigation = useNavigation()
+    const [selectedFooter,changeFooter]= useState(seleted ? seleted : footerList[0])
+
+    useEffect(()=>{
+        console.log("selectedFooter ",selectedFooter),
+        navigation.navigate(selectedFooter.screenName as never)
+    },[selectedFooter])
+
   return (
     <View style={styles.footerConteiner}>
       {
         footerList.map((opt,index)=>{
             return(
-                <TouchableOpacity onPress={()=>changeFooter(opt.type)} key={index} style={[styles.footerOption]}>
-                    <Image source={selectedFooter == opt.type ? opt.selectImage : opt.unSelectImage} style={[styles.imageStyle, opt.type=="profile" ?{borderRadius:50}:{}, selectedFooter == "profile" && opt.type=="profile" ?styles.profileSelectedStyle:null ]}/>
+                <TouchableOpacity onPress={()=>changeFooter(opt)} key={index} style={[styles.footerOption]}>
+                    <Image source={selectedFooter.type == opt.type ? opt.selectImage : opt.unSelectImage} style={[styles.imageStyle, opt.type=="profile" ?{borderRadius:50}:{}, selectedFooter == "profile" && opt.type=="profile" ?styles.profileSelectedStyle:null ]}/>
                 </TouchableOpacity>
             )
         })

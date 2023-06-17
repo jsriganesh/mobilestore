@@ -2,5 +2,6 @@ export const ScreenNames={
     login:"login",
     registration:"registration",
     home:"home",
-    productDetails:"productDetails"
+    productDetails:"productDetails",
+    myCartList:"myCartList"
 }

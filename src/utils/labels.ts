@@ -12,6 +12,14 @@ export const Labels ={
     category:"Category",
     viewAll:"View All",
     exclusiveOffer:"Exclusive Offer",
-    productDetails:"Product Details"
+    productDetails:"Product Details",
 
+    description:"Description",
+    priceDetails:"Price details",
+    showMore:"show more..",
+    specifications:"Specifications",
+    // addToCart:"ADD TO CART",
+    // buyNow:"BUY NOW",
+    addToCart:"Add to cart",
+    buyNow:"Buy now"
 }
