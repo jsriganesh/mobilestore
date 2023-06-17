@@ -12,10 +12,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import { Colors } from "../utils/colors";
 import { Labels } from "../utils/labels";
-import { UnderLine } from "../components/commonComponents";
+import { UnderLine,SmallTitleText } from "../components/commonComponents";
 import { CommonButton } from "../components/button";
 import { sampleImages } from "../utils/constants";
 import { useNavigation } from "@react-navigation/native";
+import PageHeader from "../components/pageHeader";
 
 const { width, height } = Dimensions.get("screen");
 const specifications = [
@@ -134,16 +135,7 @@ const ShowProductImages: React.FC<ImageProps> = ({
   );
 };
 
-interface TitleProps {
-  title: string;
-}
-const TitleText: React.FC<TitleProps> = ({ title }) => {
-  return (
-    <Text style={{ fontWeight: "bold", color: Colors.black, fontSize: 14 }}>
-      {title}
-    </Text>
-  );
-};
+
 
 const PriceDetails = () => {
 
@@ -151,7 +143,7 @@ const PriceDetails = () => {
 
   return (
     <View>
-      <TitleText title={Labels.description} />
+      <SmallTitleText title={Labels.description} />
       {/* <View style={{flexDirection:"row"}}> */}
       <Text style={{ color: "grey", fontSize: 16 }}>
         {
@@ -167,7 +159,7 @@ const PriceDetails = () => {
           showMoreFlag &&
         
         <>
-      <TitleText title={Labels.specifications} />
+      <SmallTitleText title={Labels.specifications} />
       {
         specifications.map((opt,index)=>{
           return(
@@ -183,7 +175,7 @@ const PriceDetails = () => {
 
         <UnderLine/>
       
-      <TitleText title={Labels.priceDetails} />
+      <SmallTitleText title={Labels.priceDetails} />
 
       <View style={{ flexDirection: "row", alignItems: "center" }}>
         <Text style={styles.discountPrice}>{"₹ 2000"}</Text>
@@ -206,7 +198,8 @@ const ProductDetails = () => {
         colors={[Colors.themeBlue, Colors.themeSubBlue]}
         style={styles.containerbody}
       >
-        <View
+        <PageHeader label={Labels.priceDetails} showFavIcon={true}/>
+        {/* <View
           style={{
             flexDirection: "row",
             justifyContent: "space-between",
@@ -238,7 +231,7 @@ const ProductDetails = () => {
               style={{ height: 32, width: 32 }}
             />
           </View>
-        </View>
+        </View> */}
 
             <ScrollView style={{borderRadius:5}}>
         <ShowProductImages

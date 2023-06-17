@@ -4,6 +4,7 @@ import { Colors } from "../../utils/colors";
 import { sampleImages } from "../../utils/constants";
 import { useNavigation } from "@react-navigation/native";
 import { ScreenNames } from "../../utils/screenNames";
+import { UnderLine } from "../commonComponents";
 
 export type CartItemDetailsProps = {};
 
@@ -11,6 +12,7 @@ const CartItemDetails: FC<CartItemDetailsProps> = ({}) => {
     const navigation= useNavigation()
   const [count, setCount] = useState(1);
   return (
+    <>
     <View style={styles.container}>
       <TouchableOpacity onPress={()=>{navigation.navigate(ScreenNames.productDetails as never)}} style={styles.details}>
         <View
@@ -54,6 +56,8 @@ const CartItemDetails: FC<CartItemDetailsProps> = ({}) => {
         </TouchableOpacity>
       </View>
     </View>
+    <UnderLine mv={0}/>
+    </>
   );
 };
 
@@ -61,9 +65,9 @@ export default CartItemDetails;
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom:10,
+    // marginBottom:10,
     backgroundColor: Colors.white,
-    borderRadius: 5,
+    // borderRadius: 5,
     flexDirection: "row",
     height: 100,
   },
@@ -90,7 +94,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   plusAndMinus: {
-    height: 20,
-    width: 20,
+    height: 15,
+    width: 15,
   },
 });

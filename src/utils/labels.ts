@@ -16,10 +16,16 @@ export const Labels ={
 
     description:"Description",
     priceDetails:"Price details",
+    cartList:"Cart List",
+    deliveryAddress:"Delivery Address",
     showMore:"show more..",
     specifications:"Specifications",
     // addToCart:"ADD TO CART",
     // buyNow:"BUY NOW",
     addToCart:"Add to cart",
-    buyNow:"Buy now"
+    buyNow:"Buy now",
+    placeOrder:"Place Order",
+    confirmAddress:"Confirm Address",
+
+    shippingTo:"Shipping To"
 }

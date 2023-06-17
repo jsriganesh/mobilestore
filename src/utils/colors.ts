@@ -7,5 +7,6 @@ export const Colors ={
     white:"#FFFFFF",
     textBoxBGColor:"#7690A8",
     green:"#398D3C",
-    linkBlue:"#2874f0"
+    linkBlue:"#2874f0",
+    red:"red"
 }

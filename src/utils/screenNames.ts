@@ -3,5 +3,6 @@ export const ScreenNames={
     registration:"registration",
     home:"home",
     productDetails:"productDetails",
-    myCartList:"myCartList"
+    myCartList:"myCartList",
+    addressList:"addressList"
 }
